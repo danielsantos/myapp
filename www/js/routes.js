@@ -18,16 +18,6 @@ angular.module('app.routes', [])
 		}
 	})
 
-  .state('menu.detalhesDoJogo', {
-	url: '/page2',
-	views: {
-	  'side-menu21': {
-		templateUrl: 'templates/detalhesDoJogo.html',
-		controller: 'detalhesDoJogoCtrl'
-	  }
-	}
-  })
-
   .state('menu.jogos', {
     url: '/jogos',
     views: {
@@ -42,12 +32,6 @@ angular.module('app.routes', [])
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
     controller: 'menuCtrl'
-  })
-
-  .state('cadastreSe', {
-    url: '/page4',
-    templateUrl: 'templates/cadastreSe.html',
-    controller: 'cadastreSeCtrl'
   })
 
   .state('menu.meusJogos', {
@@ -68,20 +52,9 @@ angular.module('app.routes', [])
         controller: 'dadosCadastraisCtrl'
       }
     }
-  })
+  });
 
-  .state('menu.jogoEscolhido', {
-    url: '/jogoEscolhido',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/jogoEscolhido.html',
-        controller: 'jogoEscolhidoCtrl'
-      }
-    }
-  })
-
-$urlRouterProvider.otherwise('/side-menu21/page1')
-
+  $urlRouterProvider.otherwise('/side-menu21/page1')
   
 
 });
