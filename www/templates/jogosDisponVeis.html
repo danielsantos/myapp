@@ -1,0 +1,79 @@
+<ion-view title="Jogos Disponíveis" id="page1">
+
+	<form id="teste" ng-submit="cadastrar(usuario)" ng-app="app.controllers" ng-controller="jogosDisponVeisCtrl">
+  
+			<div class="card">
+			
+				<div class="item item-divider">
+					Usu&aacute;rio			
+				</div>
+				
+				<div class="item item-text-wrap">
+					<div class="list">
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Nome</span>
+							<input type="text" ng-model="usuario.nome">
+						</label>
+					</div>
+				</div>
+				
+				<!--<a class="button button-positive button-full">Cadastrar</a>-->
+				<button id="detalhesDoJogo-button5" class="button button-positive  button-block">Cadastrar</button>
+				
+			</div>
+	
+	</form>
+	
+	<h1>Listagem...</h1>
+	
+	<ion-list>
+		<ion-item ng-repeat="usuario in listaDeUsuarios">
+			{{usuario.nome}}
+		</ion-item> 
+	</ion-list>
+
+
+  <ion-content padding="true" class="has-header">
+  
+    <ion-list id="jogosDisponVeis-list3">
+	
+		<ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item8" 
+				  ui-sref="menu.detalhesDoJogo" ng-repeat="jogo in jogos track by jogo.id">
+			<img src="img/gta-v-logo1.png">
+			<h2>{{jogo.titulo}}</h2>
+			<p style="white-space:normal;">Usuário: </p>
+			<p style="white-space:normal;">Gênero: {{jogo.genero}}</p>
+			<p style="white-space:normal;">Fabricante: {{jogo.fabricante}}</p>
+		</ion-item>
+
+	<!--		
+      <ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item8" ui-sref="menu.detalhesDoJogo">
+        <img src="img/gta-v-logo1.png">
+        <h2>GTA V</h2>
+        <p style="white-space:normal;">Usuário: Nikit4 ---- Fabricante: Rockstar</p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item9" ui-sref="menu.detalhesDoJogo">
+        <img src="img/A638-5.jpg">
+        <h2>FIFA 2016</h2>
+        <p style="white-space:normal;">Usuário: Phantom Fabricante: EA Sports</p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item11">
+        <img src="img/logo-uber.jpg">
+        <h2>UBER</h2>
+        <p style="white-space:normal;">Seja seu chefe! Dirija seu carro</p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item12">
+        <img src="img/call-of-duty-black-ops_2010_07-15-10_02.jpg">
+        <h2>Call Of Duty - Black Ops</h2>
+        <p style="white-space:normal;">Usuário: TomJW --- Fabricante: Activision</p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="jogosDisponVeis-list-item13">
+        <img src="img/Nfsu2_capa_pt.jpg">
+        <h2>Need for Speed</h2>
+        <p style="white-space:normal;">Usuário: Joga10 --- Fabricante: EA Sports</p>
+      </ion-item>
+	-->
+	
+    </ion-list>
+  </ion-content>
+</ion-view>
