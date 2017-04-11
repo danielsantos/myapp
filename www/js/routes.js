@@ -8,33 +8,31 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
-
-      .state('menu.jogosDisponVeis', {
-    url: '/page1',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/jogosDisponVeis.html',
-        controller: 'jogosDisponVeisCtrl'
-      }
-    }
-  })
+	.state('menu.jogosDisponVeis', {
+			url: '/page1',
+			views: {
+				'side-menu21': {
+					templateUrl: 'templates/cadastrar.html',
+					controller: 'jogosDisponVeisCtrl'
+			}
+		}
+	})
 
   .state('menu.detalhesDoJogo', {
-    url: '/page2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/detalhesDoJogo.html',
-        controller: 'detalhesDoJogoCtrl'
-      }
-    }
+	url: '/page2',
+	views: {
+	  'side-menu21': {
+		templateUrl: 'templates/detalhesDoJogo.html',
+		controller: 'detalhesDoJogoCtrl'
+	  }
+	}
   })
 
   .state('menu.jogos', {
     url: '/jogos',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/jogos.html',
+        templateUrl: 'templates/excluir.html',
         controller: 'jogosCtrl'
       }
     }
@@ -56,7 +54,7 @@ angular.module('app.routes', [])
     url: '/meusJogos',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/meusJogos.html',
+        templateUrl: 'templates/atualizar.html',
         controller: 'meusJogosCtrl'
       }
     }
@@ -66,7 +64,7 @@ angular.module('app.routes', [])
     url: '/dadosCadastrais',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/dadosCadastrais.html',
+        templateUrl: 'templates/listar.html',
         controller: 'dadosCadastraisCtrl'
       }
     }
