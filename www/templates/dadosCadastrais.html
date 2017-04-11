@@ -1,6 +1,13 @@
-<ion-view title="Dados Cadastrais" id="page6">
+<ion-view title="Listando Usu&aacute;rios" id="page6">
   <ion-content padding="true" class="has-header">
+	
+	<ion-list ng-app="app.controllers" ng-controller="jogosDisponVeisCtrl">
+		<ion-item ng-repeat="usuario in listaDeUsuarios">
+			{{usuario.id}} - {{usuario.nome}}
+		</ion-item> 
+	</ion-list>
   
+	<!--
 	<p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
   
     <form id="dadosCadastrais-form4" class="list" ng-submit="submeter(dadosCadastrais)">
@@ -59,10 +66,12 @@
       </label>
       <label class="item item-input" id="dadosCadastrais-input7">
         <span class="input-label">Cidade</span>
-		<!-- TODO USAR WEBSERVICE PARA TRAZER AS CIDADES -->
+
         <input type="text" placeholder="" ng-model="dadosCadastrais.cidade">
       </label>
 	  <button id="detalhesDoJogo-button5" class="button button-positive  button-block">Atualizar</button>
     </form>
+	-->
+	
   </ion-content>
 </ion-view>

@@ -1,5 +1,37 @@
-<ion-view title="Meus Jogos" id="page5">
+<ion-view title="Atualizar Usu&aacute;rio" id="page5">
   <ion-content padding="true" class="has-header">
+  
+	<form id="teste" ng-submit="atualizar(usuario)" ng-app="app.controllers" ng-controller="jogosDisponVeisCtrl">
+  
+		<div class="card">
+
+			<div class="item item-text-wrap">
+				<div class="list">
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Id</span>
+						<input type="text" ng-model="usuario.id">
+					</label>
+				</div>
+			</div>
+			
+			<div class="item item-text-wrap">
+				<div class="list">
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Nome</span>
+						<input type="text" ng-model="usuario.nome">
+					</label>
+				</div>
+			</div>
+			
+			<button id="detalhesDoJogo-button5" 
+			        class="button button-positive button-block">Atualizar</button>
+			
+		</div>
+	
+	</form>  
+  
+  
+	<!--
     <ion-list id="meusJogos-list5">
       <ion-item class="item-thumbnail-left" id="meusJogos-list-item14">
         <img src="img/Uncharted_4_box_artwork.jpg">
@@ -22,5 +54,7 @@
         <p>Disponível para Troca: SIM</p>
       </ion-item>
     </ion-list>
+	-->
+	
   </ion-content>
 </ion-view>

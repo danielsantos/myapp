@@ -20,6 +20,30 @@ angular.module('app.controllers', [])
 			console.log(erro);
 		});
 
+	};
+	
+	$scope.atualizar = function (usuario) {
+			
+		$http.put('https://crudrestful.herokuapp.com/usuarios/' + usuario.id, usuario)
+		.success(function(retorno) {
+			console.log(retorno);
+		})
+		.error(function(erro) {
+			console.log(erro);
+		});
+
+	};	
+	
+	$scope.excluir = function (usuario) {
+			
+		$http.delete('https://crudrestful.herokuapp.com/usuarios/' + usuario.id)
+		.success(function(retorno) {
+			console.log(retorno);
+		})
+		.error(function(erro) {
+			console.log(erro);
+		});
+
 	};	
 	
 	/*
