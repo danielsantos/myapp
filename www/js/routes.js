@@ -9,7 +9,7 @@ angular.module('app.routes', [])
 			views: {
 				'side-menu21': {
 					templateUrl: 'templates/cadastrar.html',
-					controller: 'jogosDisponVeisCtrl'
+					controller: 'mainCtrl'
 			}
 		}
 	})
@@ -19,7 +19,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/excluir.html',
-        controller: 'jogosCtrl'
+        controller: 'mainCtrl'
       }
     }
   })
@@ -27,7 +27,7 @@ angular.module('app.routes', [])
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
-    controller: 'menuCtrl'
+    controller: 'mainCtrl'
   })
 
   .state('menu.meusJogos', {
@@ -35,7 +35,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/atualizar.html',
-        controller: 'meusJogosCtrl'
+        controller: 'mainCtrl'
       }
     }
   })
@@ -45,7 +45,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/listar.html',
-        controller: 'dadosCadastraisCtrl'
+        controller: 'mainCtrl'
       }
     }
   });
