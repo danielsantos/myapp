@@ -39,7 +39,37 @@ angular.module('app.routes', [])
       }
     }
   })
-
+    
+  .state('menu.add', {
+      url: '/add',
+	  views : {
+			'side-menu21' : {
+				templateUrl: 'templates/edit.html',
+				controller: 'mainCtrl'
+			}
+	  }
+  })
+  
+  .state('menu.list', {
+      url: '/list',
+	  views : {
+			'side-menu21' : {
+				templateUrl: 'templates/list.html'//,
+				//controller: 'ListarCtrl'
+			}
+	  }
+  })
+  
+  .state('menu.edit', {
+      url: '/edit/:userId',
+	  views : {
+			'side-menu21' : {
+				templateUrl: 'templates/edit.html',
+				controller: 'EditCtrl'
+			}
+	  }
+    })  
+  
   .state('menu.dadosCadastrais', {
     url: '/dadosCadastrais',
     views: {
