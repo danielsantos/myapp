@@ -1,4 +1,5 @@
 {
   "name": "myapp",
-  "app_id": "451d231c"
+  "app_id": "451d231c",
+  "type": "ionic1"
 }

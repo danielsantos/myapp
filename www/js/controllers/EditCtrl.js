@@ -16,26 +16,55 @@ angular.module('app.controllers')
 	
     $scope.save = function(usuario) {
 		
-		usuario.id = $state.params.userId;
-		
-		$http.put('https://crudrestful.herokuapp.com/usuarios/' + $scope.user.id, usuario)
-		.success(function(retorno) {
+		if ($state.params.userId != null) {
 			
-			$http.get('http://crudrestful.herokuapp.com/usuarios')
-			.success(function(lista) {
-				$scope.users = lista;
+			/* ATUALIZANDO */
+			
+			usuario.id = $state.params.userId;
+			
+			$http.put('https://crudrestful.herokuapp.com/usuarios/' + $scope.user.id, usuario)
+			.success(function(retorno) {
+				
+				$http.get('http://crudrestful.herokuapp.com/usuarios')
+				.success(function(lista) {
+					$scope.users = lista;
+				})
+				.error(function(erro) {
+					console.log(erro);
+				});
+				
+				$state.go('menu.list');
+				$window.location.reload();
+				
 			})
 			.error(function(erro) {
 				console.log(erro);
 			});
 			
-			$state.go('menu.list');
-			$window.location.reload();
+		} else {
 			
-		})
-		.error(function(erro) {
-			console.log(erro);
-		});
+			/* ADICIONANDO */
+			
+			$http.post('https://crudrestful.herokuapp.com/usuarios', usuario)
+			.success(function(retorno) {
+			
+				$http.get('http://crudrestful.herokuapp.com/usuarios')
+				.success(function(lista) {
+					$scope.users = lista;
+				})
+				.error(function(erro) {
+					console.log(erro);
+				});
+				
+				$state.go('menu.list');
+				$window.location.reload();
+			
+			})
+			.error(function(erro) {
+				console.log(erro);
+			});
+			
+		}
       
     };
 		

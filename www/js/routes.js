@@ -13,6 +13,26 @@ angular.module('app.routes', [])
 			}
 		}
 	})
+	
+	.state('menu.novo', {
+			url: '/page1',
+			views: {
+				'side-menu21': {
+					templateUrl: 'templates/novo.html',
+					controller: 'mainCtrl'
+			}
+		}
+	})
+	
+	.state('menu.listaNovo', {
+			url: '/page1',
+			views: {
+				'side-menu21': {
+					templateUrl: 'templates/listaNovo.html',
+					controller: 'mainCtrl'
+			}
+		}
+	})
 
   .state('menu.jogos', {
     url: '/jogos',
@@ -45,7 +65,7 @@ angular.module('app.routes', [])
 	  views : {
 			'side-menu21' : {
 				templateUrl: 'templates/edit.html',
-				controller: 'mainCtrl'
+				controller: 'EditCtrl'
 			}
 	  }
   })
